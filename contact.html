@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="icons/home.png" alt="Home" style="width: 30px; height: 30px; margin-right: 5px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Галерея</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Заголовок -->
+    <header class="jumbotron text-center">
+        <h1 class="display-4">Свяжитесь с нами</h1>
+        <p class="lead">Мы всегда рады вашим вопросам и предложениям о наших аксессуарах.</p>
+    </header>
+
+    <!-- Форма -->
+    <div class="container">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="userName">Имя</label>
+                <input type="text" class="form-control" id="userName" name="userName" value="Иван" required>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Email</label>
+                <input type="email" class="form-control" id="userEmail" name="userEmail" value="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="userAge">Возраст</label>
+                <input type="number" class="form-control" id="userAge" name="userAge" value="18" min="1" required>
+            </div>
+            <div class="form-group">
+                <label>Куда прислать ответ?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="preference" id="preference1" value="option1" checked required>
+                    <label class="form-check-label" for="preference1">На email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="preference" id="preference2" value="option2" required>
+                    <label class="form-check-label" for="preference2">В другю соцсеть (указать в сообщении)</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="userMessage">Сообщение</label>
+                <textarea class="form-control" id="userMessage" name="userMessage" rows="4" required>Ваше сообщение</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitContact">Отправить</button>
+        </form>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2023 Все права защищены.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Функция для очистки дефолтных значений при фокусировке
+        function clearDefaultValue(input) {
+            input.addEventListener('focus', function() {
+                if (input.value === input.defaultValue) {
+                    input.value = '';
+                }
+            });
+            input.addEventListener('blur', function() {
+                if (input.value === '') {
+                    input.value = input.defaultValue;
+                }
+            });
+        }
+
+        // Получаем все поля ввода и применяем функцию очистки
+        const userNameInput = document.getElementById('userName');
+        const userEmailInput = document.getElementById('userEmail');
+        const userAgeInput = document.getElementById('userAge');
+        const userMessageInput = document.getElementById('userMessage');
+
+        clearDefaultValue(userNameInput);
+        clearDefaultValue(userEmailInput);
+        clearDefaultValue(userAgeInput);
+        clearDefaultValue(userMessageInput);
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let userName = document.querySelector('input[name="userName"]').value;
+            let userEmail = document.querySelector('input[name="userEmail"]').value;
+            let userAge = document.querySelector('input[name="userAge"]').value;
+            let userMessage = document.querySelector('textarea[name="userMessage"]').value;
+            let userPreference = document.querySelector('input[name="preference"]:checked');
+
+            // Проверка на заполненность всех полей
+            if (userName && userEmail && userAge && userMessage && userPreference) {
+                let url = `https://google.com/search?q=search&formulation=${encodeURIComponent(userName)}&email=${encodeURIComponent(userEmail)}&age=${encodeURIComponent(userAge)}&message=${encodeURIComponent(userMessage)}&preference=${encodeURIComponent(userPreference.value)}`;
+                window.open(url, '_blank');
+            } else {
+                alert("Пожалуйста, заполните все поля формы.");
+            }
+        });
+    </script>
+</body>
+</html>

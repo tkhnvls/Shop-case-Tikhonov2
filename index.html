@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="icons/home.png" alt="Home" style="width: 30px; height: 30px; margin-right: 5px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Заголовок -->
+    <header class="jumbotron text-center">
+        <h1 class="display-4">Добро пожаловать в наш магазин аксессуаров!</h1>
+        <p class="lead">Мы предлагаем лучшие аксессуары для вашего телефона.</p>
+        <a class="btn btn-primary btn-lg" href="products.html" role="button">Узнать больше</a>
+    </header>
+
+    <!-- Информация -->
+    <div class="container">
+        <h2>Наши преимущества</h2>
+        <p>Мы предлагаем высококачественные аксессуары, которые сделают вашу жизнь удобнее и стильнее. Наша команда тщательно отбирает каждый продукт, чтобы гарантировать его качество и долговечность. Мы стремимся предоставить нашим клиентам только лучшее, и поэтому работаем только с проверенными производителями.</p>
+        <p>Кроме того, мы предлагаем конкурентоспособные цены и регулярные акции, чтобы сделать покупки еще более приятными. Наша цель - удовлетворить потребности каждого клиента и обеспечить отличный сервис на всех этапах покупки.</p>
+        <a href="#section1" class="btn btn-secondary">Перейти к разделу 1</a>
+        <a href="#section2" class="btn btn-secondary">Перейти к разделу 2</a>
+        <a href="#section3" class="btn btn-secondary">Перейти к разделу 3</a>
+        <a href="#section4" class="btn btn-secondary">Перейти к разделу 4</a>
+        <a href="#" class="btn btn-secondary" id="scrollToTop">Наверх</a>
+    </div>   
+
+    <!-- Разделы -->
+    <div class="container" id="section1">
+        <h3>Раздел 1: Чехлы и зарядные устройства</h3>
+        <p>В нашем магазине вы найдете широкий ассортимент чехлов, зарядных устройств и повербанков, которые обеспечат надежную защиту и зарядку вашего телефона. Мы предлагаем чехлы различных стилей и материалов, чтобы каждый мог найти что-то по своему вкусу. Наши зарядные устройства отличаются высокой мощностью и скоростью зарядки, что позволяет вам всегда оставаться на связи.</p>
+        <p>Мы также предлагаем специальные предложения на наборы, которые включают в себя чехол и зарядное устройство, что позволяет вам сэкономить и получить все необходимое в одном месте.</p>
+    </div>
+
+    <div class="container" id="section2">
+        <h3>Раздел 2: Умные часы и аксессуары</h3>
+        <p>Мы также предлагаем умные часы и ремешки для них, которые помогут вам следить за своим здоровьем и оставаться на связи. Умные часы от известных брендов обеспечивают множество функций, включая мониторинг сердечного ритма, шагомеры и уведомления о сообщениях.</p>
+        <p>Вы можете выбрать из различных стилей и цветов, чтобы найти идеальный вариант для себя. Наши ремешки для умных часов также доступны в различных материалах и дизайнах, что позволяет вам легко менять стиль в зависимости от вашего настроения или случая.</p>
+        <p>Кроме того, мы предлагаем специальные акции на умные часы и аксессуары, чтобы сделать их более доступными для наших клиентов. Не упустите возможность приобрести качественные устройства по выгодным ценам!</p>
+    </div>
+
+    <!-- Раздел 3: Галерея товаров -->
+    <div class="container" id="section3">
+        <h3>Раздел 3: Галерея товаров</h3>
+        <p>В нашей галерее вы можете ознакомиться с полным ассортиментом товаров, которые мы предлагаем. Мы регулярно обновляем нашу коллекцию, добавляя новые модели и аксессуары, чтобы вы всегда могли найти что-то новое и интересное.</p>
+        <p>Каждый товар сопровождается подробным описанием и фотографиями, чтобы вы могли сделать осознанный выбор. Мы также предоставляем отзывы наших клиентов, чтобы вы могли узнать мнение других покупателей о каждом продукте.</p>
+    </div>
+
+    <!-- Раздел 4: Контакты и поддержка -->
+    <div class="container" id="section4">
+        <h3>Раздел 4: Контакты и поддержка</h3>
+        <p>Если у вас есть вопросы или вам нужна помощь, наша команда поддержки всегда готова помочь. Вы можете связаться с нами через форму обратной связи на странице "Контакты" или по телефону, указанному на сайте.</p>
+        <p>Мы ценим каждого клиента и стремимся предоставить лучший сервис. Не стесняйтесь обращаться к нам с любыми вопросами или предложениями!</p>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2023 Все права защищены.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.getElementById('scrollToTop').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Галерея</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <!-- Навигация -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="icons/home.png" alt="Home" style="width: 30px; height: 30px; margin-right: 5px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Товары</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gallery.html">Галерея</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Заголовок -->
+        <header class="jumbotron text-center">
+            <h1 class="display-4">Галерея</h1>
+            <p class="lead">Посмотрите наши категории аксессуаров.</p>
+        </header>
+
+        <!-- Галерея изображений -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/phone_case.jpg" class="img-fluid" alt="Чехол для телефона">
+                    <p>Чехлы на любой вид и вкус. Качественные чехлы с MagSafe.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/charger.jpg" class="img-fluid" alt="Зарядное устройство">
+                    <p>Оригинальные адаптеры питания Apple.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/power_bank.jpg" class="img-fluid" alt="Повербанк">
+                    <p>Повербанк для iPhone с сильным магнитом MagSafe.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/smart_watch.jpg" class="img-fluid" alt="Умные часы">
+                    <p>Оригинальные Apple Watch со скидкой до 40%*.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/watch_straps.jpg" class="img-fluid" alt="Ремешки для часов">
+                    <p>Оригинальные ремешки для Apple Watch.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/phone_accessories.jpg" class="img-fluid" alt="Аксессуары для телефона">
+                    <p>Разнообразные аксессуары для вашего телефона. Все, что нужно для расширения функциональности.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Подвал -->
+        <footer class="bg-light text-center py-4">
+            <p>&copy; 2023 Все права защищены.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
