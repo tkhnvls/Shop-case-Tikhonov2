@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-right: 3%;
+}
+
+.lead {
+    text-align: justify;
+}
+
+footer {
+    background-color: #f8f9fa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    padding: 3% 3% 3% 3%;
+    margin: 3% 3% 3% 3%;
+}
+
+.btn {
+    margin: 3% 3% 3% 3%;
+}
+
+.card {
+    margin: 3% 3% 3% 3%; 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar + .container {
+    margin-top: 70px;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p { 
+    text-indent: 5%;
+    text-align: justify;
+    padding-right: 2%;
+}
+
+textarea {
+    min-height: 5vh;
+}
+
+img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.img-caption {
+    text-align: right;
+    font-size: 1em;
+}
+
+#cart-items p {
+    white-space: nowrap;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+#scrollToTop.show {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .jumbotron {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar + .container {
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    header {
+        text-align: left;
+        font-size: 1em;
+        margin-top: 5em;
+        margin-left: 0.8em;
+        padding: 1em;
+    }
+
+    header p {
+        text-align: left;
+    }
+
+    #scrollToTop {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+.card p {
+    text-align: left;
+}
+
+blockquote {
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+@media print {
+    input[type="text"], textarea {
+        overflow: visible;
+        white-space: pre-wrap;
+        position: relative;
+        display: inline-block;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    input[type="text"]::placeholder, textarea::placeholder {
+        visibility: hidden;
+    }
+}
